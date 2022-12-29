@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'base',
+    'base'
 ]
+
+AUTH_USER_MODELS = 'base.ReservaServico'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
