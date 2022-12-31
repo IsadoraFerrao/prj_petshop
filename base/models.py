@@ -37,10 +37,7 @@ class ReservaServico(models.Model):
     dia_reserva = models.DateField(verbose_name="Dia da Reserva")
     id_pet = models.ForeignKey(CadastroPet, on_delete=models.CASCADE)
     id_reponsavel = models.ForeignKey(Responsavel, on_delete=models.CASCADE)
-    #cpf_reponsavel = models.ForeignKey(Responsavel, on_delete=models.CASCADE)
-    #telefone_reponsavel = models.ForeignKey(Responsavel, on_delete=models.CASCADE)
-
-
+    
 
 
 
