@@ -11,9 +11,26 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
         crossorigin="anonymous">
         <style>
+            container-fluid {
+                font-weight: bolder;
+            }
             main {
                 padding: 10px;
-                margin-top: 30px;
+                margin-top: 20px;
+            }
+            h1 {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            form {
+                padding: 10px;
+            }
+            footer {
+                text-align: end;
+                padding: 20px;
+                margin: 20px;
+                background-color: azure;
+                font-weight: bold;
             }
 
         </style>
@@ -24,18 +41,18 @@
         <head class="d-flex align-items-center pb-3 mb-5 border-bottom">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
-                <a class="navbar-brand" href="{% url 'inicio' %}">Pet Online</a>
+                <a class="navbar-brand mb-0 h1" href="{% url 'inicio' %}">Pet Online</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'inicio' %}">Inicio</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'contato' %}">Contato</a>
-                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li> -->
                     <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Dropdown
@@ -51,19 +68,34 @@
                         <a class="nav-link disabled">Disabled</a>
                     </li> -->
                     </ul>
-                    <form class="d-flex" role="search">
+                    <!-- <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                    </form> -->
                 </div>
                 </div>
             </nav>
         </head>
         <main>
-            <h1>Reserve já o banho do seu Pet!</h1>
+            <h1>Contato</h1>
+            <form> 
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Nome</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nome">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <input class="btn btn-outline-success" type="submit" value="Enviar">
+            </form>
         </main>
-        <footer class="pt-5 my-5 text-muted border-top">
-            Curso Python Ultima Schol
+        <footer class="pt-2 my-2 text-muted border-top">
+            Curso Python Ultima School
         </footer>
         </div>
     </body>
