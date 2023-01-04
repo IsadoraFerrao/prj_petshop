@@ -5,7 +5,7 @@ from base.views import *
 app_name = 'base'
 
 urlpatterns = [
-    path('', inicio, name='inicio'),
-    path('contato/', contato, name='contato'),
+    path('', index, name='index'),
+    path('fale_conosco/', fale_conosco, name='fale_conosco'),
     path('admin/', admin.site.urls),
 ]
