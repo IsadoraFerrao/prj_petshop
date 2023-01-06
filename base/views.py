@@ -4,7 +4,8 @@ from base.models import Contato
 """ from base.forms import ReservaForm
 from base.models import Reserva """
 
-
+def inicio(request):
+    return render(request, 'inicio.html')
 
 def index(request):
     return render(request, 'index.html')
