@@ -1,15 +1,15 @@
 from django.shortcuts import render
 from base.forms import ContatoForm
 from base.models import Contato
-from base.forms import ReservaForm
-from base.models import Reserva
+""" from base.forms import ReservaForm
+from base.models import Reserva """
 
 
 
 def index(request):
     return render(request, 'index.html')
 
-def reserva(request):
+""" def reserva(request):
     sucesso = False
     form = ReservaForm(request.POST or None)
     if form.is_valid():
@@ -22,7 +22,7 @@ def reserva(request):
         'sucesso': sucesso
     }
     return render(request, 'reserva.html', contexto)
-  
+   """
 def contato(request):
     sucesso = False
     form = ContatoForm(request.POST or None)

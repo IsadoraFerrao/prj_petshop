@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap5',
     'base',
+    'reserva',
 ]
 
 AUTH_USER_MODELS = 'base.ReservaServico'
