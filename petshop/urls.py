@@ -6,6 +6,7 @@ app_name = 'base'
 
 urlpatterns = [
     path('', index, name='index'),
+    path('reserva/', reserva, name='reserva'),
     path('contato/', contato, name='contato'),
     path('admin/', admin.site.urls),
 ]

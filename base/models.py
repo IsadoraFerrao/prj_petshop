@@ -36,15 +36,12 @@ class CadastroPet(models.Model):
     peso = models.IntegerField(verbose_name="Peso")
     id_responsavel = models.ForeignKey(Responsavel, on_delete=models.CASCADE)
     tipo = models.CharField(max_length=30, verbose_name="Tipo", choices=tipos_list)
+"""
 
 
-class ReservaServico(models.Model):
+class Reserva(models.Model):
+    nome_pet = models.CharField(max_length=50, verbose_name="Dia da Reserva")
+    telefone = models.CharField(max_length=14, verbose_name="Telefone")
+    dia_reserva = models.DateField(max_length=14, verbose_name="Dia da Reserva")
+    observacoes = models.TextField(verbose_name="Observações")
     
-    dia_reserva = models.DateField(verbose_name="Dia da Reserva")
-    id_pet = models.ForeignKey(CadastroPet, on_delete=models.CASCADE)
-    id_reponsavel = models.ForeignKey(Responsavel, on_delete=models.CASCADE)
-    
-
-
-
- """
