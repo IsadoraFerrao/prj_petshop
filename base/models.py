@@ -6,7 +6,13 @@ class Contato(models.Model):
     nome = models.CharField(max_length=50)
     email = models.EmailField(max_length=75)
     mensagem = models.TextField()
-    data = models.DateTimeField(auto_now=True)
+    data = models.DateTimeField(verbose_name="Data Envio", auto_now_add=True)
+    def __str__(self):
+        return f'{self.nome} - {self.email}'
+    class Meta:
+        verbose_name = 'Formulário de Contato'
+        verbose_name_plural = 'Formulários de Contatos'
+        ordering = ['-data']
 
 
 
@@ -40,8 +46,14 @@ class CadastroPet(models.Model):
 
 
 class Reserva(models.Model):
-    nome_pet = models.CharField(max_length=50, verbose_name="Dia da Reserva")
+    nome_pet = models.CharField(max_length=50, verbose_name="Nome do Pet")
     telefone = models.CharField(max_length=14, verbose_name="Telefone")
-    dia_reserva = models.DateField(max_length=14, verbose_name="Dia da Reserva")
+    dia_reserva = models.DateField(verbose_name='Dia do Banho')
     observacoes = models.TextField(verbose_name="Observações")
-    
+    data = models.DateTimeField(verbose_name='Data da reserva')
+    def __str__(self):
+        return f'{self.nome_pet} - {self.telefone} - {self.dia_reserva}'
+    class Meta:
+        verbose_name = 'Reserva de Banho'
+        verbose_name_plural = 'Reservas de Banhos'
+        ordering = ['-dia_reserva']

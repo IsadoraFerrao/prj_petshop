@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from base.forms import ContatoForm
 from base.models import Contato
-from base.models import ReservaForm
+from base.forms import ReservaForm
 from base.models import Reserva
 
 
