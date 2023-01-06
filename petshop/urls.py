@@ -6,6 +6,6 @@ app_name = 'base'
 
 urlpatterns = [
     path('', index, name='index'),
-    path('fale_conosco/', fale_conosco, name='fale_conosco'),
+    path('contato/', contato, name='contato'),
     path('admin/', admin.site.urls),
 ]

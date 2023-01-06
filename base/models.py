@@ -2,8 +2,15 @@ from django.db import models
 from django.conf import settings
 
 
+class Contato(models.Model):
+    nome = models.CharField(max_length=50)
+    email = models.EmailField(max_length=75)
+    mensagem = models.TextField()
+    data = models.DateTimeField(auto_now=True)
 
-class Responsavel(models.Model):
+
+
+""" class Responsavel(models.Model):
     nome = models.CharField(max_length=50, verbose_name="Nome")
     cpf = models.CharField(max_length=11, verbose_name="CPF")
     telefone = models.CharField(max_length=14, verbose_name="Telefone")
@@ -40,3 +47,4 @@ class ReservaServico(models.Model):
 
 
 
+ """
