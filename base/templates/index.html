@@ -16,12 +16,12 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-              </li>
-              <li class="nav-item">
+              </li> -->
+             <!--  <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{% url 'reserva:criar_reserva' %}">Reserva</a>
-              </li>
+              </li> -->
               <li class="nav-item">
                 <a class="nav-link active" href="{% url 'contato' %}">Contato</a>
               </li>
@@ -36,10 +36,11 @@
             <div class="card-body">
               <h5 class="card-title">Demostre amor a quem te ama!</h5>
               <p class="card-text">Reserve já o banho do seu Pet!</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <a class="btn btn-outline-primary" aria-current="page" href="{% url 'reserva:criar_reserva' %}">Reserva</a>
+              <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
             </div>
           </div>
-          <br>
+          <!-- <br>
           <br>
           <div class="row row-cols-1 row-cols-md-2 g-4 col-lg-11 m-auto">
             <div class="col">
@@ -62,7 +63,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </main>
       <footer class="card col-lg-12 m-auto my-5 pt-5 text-muted border-top" style="text-align: end; background-color: rgb(238, 238, 238); padding-right: 50px; padding-top: 10px; padding-bottom: 5px ;">
