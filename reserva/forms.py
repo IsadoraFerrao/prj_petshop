@@ -6,5 +6,5 @@ class ReservaForm(forms.ModelForm):
     class Meta:
         model = Reserva
         fields = [
-            'nome', 'email', 'nome_pet', 'data', 'tutrno', 'tamanho', 'observacoes'
+            'nome', 'email', 'nome_pet', 'data', 'turno', 'tamanho', 'observacoes'
         ]
