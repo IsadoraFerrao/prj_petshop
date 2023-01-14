@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from base.forms import ContatoForm
 
+def index1(request):
+    return render(request, 'index1.html')
 
+    
 def index(request):
     return render(request, 'index.html')
 
