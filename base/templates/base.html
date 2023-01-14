@@ -1,4 +1,4 @@
-
+{% load static %}
 <!doctype html>
 <html lang="en" class="h-100">
   <head>
@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Cover Template · Bootstrap v5.0</title>
+    <title>Sistema Pet</title>
     
 
     <!-- Bootstrap core CSS -->
@@ -33,26 +33,23 @@
     <!-- Custom styles for this template -->
     <link href="/static/css/cover.css" rel="stylesheet">
   </head>
-  <body class="d-flex h-100 text-center text-white bg-dark">
+  <body class="d-flex h-100 text-center text-white" style="background: black;">
     
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="mb-auto">
     <div>
-      <h3 class="float-md-start mb-0">Pet Online</h3>
+      <h3 class="float-md-start mb-0 fst-italic">Pet Online</h3>
       <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Reserva</a>
-        <a class="nav-link" href="#">Contato</a>
+        <a class="nav-link fst-italic active" aria-current="page" href="{% url 'index' %}">Início</a>
+        <a class="nav-link fst-italic active" href="{% url 'reserva:criar_reserva' %}">Reserva</a>
+        <a class="nav-link fst-italic active" href="{% url 'contato' %}">Contato</a>
       </nav>
     </div>
   </header>
 {%block conteudo %} {% endblock %}
-  <footer class="mt-auto text-white-50">
-    <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+  <footer class="mt-auto text-white fst-italic">
+    <p>Criado por William Santos</p>
   </footer>
 </div>
-
-
-    
   </body>
 </html>

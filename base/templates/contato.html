@@ -1,23 +1,22 @@
-{% extends 'base1.html' %}
+{% extends 'base.html' %}
 
 {% load bootstrap5 %}
 
 {% block conteudo %}
-<main>
-  <h2 class="mt-3 mb-6" style="text-align: center;color: rgb(20, 90, 50);">Fale Conosco</h2>
-  <p class="col-11 m-auto" style="color: rgb(20, 90, 50);">
+<main class="px-3">
+  <h2 class="mt-lg-5 mb-6 fst-italic" style="text-align: center">Fale Conosco</h2>
+  <p class="fst-italic">
     Envie uma mensagem através do Formulário abaixo ou ligue para o telefone {{ telefone }}
     e fale com o responsável {{ responsavel|upper }}.
   </p>
       {% if sucesso %}
-      <p class="alert alert-success">Mensagem enviada com sucesso!</p>
+      <p class="alert alert-success fst-italic">Mensagem enviada com sucesso!</p>
       {% else %}
      <br>
-     <form action="" method="post" novalidate class=" m-auto" style="color: rgb(20, 90, 50);">
+     <form action="" method="post" novalidate class=" m-auto fst-italic">
       {% csrf_token %}
       {% bootstrap_form form %}
-      <hr>
-      <button class="btn btn-primary" type="submit">Enviar Mensagem</button>
+      <button class="btn btn-primary my-5 fst-italic" type="submit">Enviar Mensagem</button>
     </form>
     {% endif %}
 </main>

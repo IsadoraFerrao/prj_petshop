@@ -4,14 +4,13 @@
       <main>
         <div>
         {% if sucesso %}
-        <p class="alert alert-success">Reserva realizada com sucesso, em breve iremos entrar em contato!</p>
+        <p class="alert alert-success fst-italic">Reserva realizada com sucesso, em breve iremos entrar em contato!</p>
         {% else %}
         <br>
-        <form action="" method="post" novalidate class="col-11 m-auto" style="color: rgb(20, 90, 50);">
+        <form action="" method="post" novalidate class="col-11 m-auto mt-md-5 fst-italic">
           {% csrf_token %}
           {% bootstrap_form form %}
-          <hr>
-            <button class="btn btn-primary" type="submit">Agendar</button>
+            <button class="btn btn-primary my-5 fst-italic" type="submit">Agendar</button>
         </form>
         {% endif %}
       </div>
