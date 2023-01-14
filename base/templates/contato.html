@@ -35,7 +35,7 @@
         <p class="alert alert-success">Mensagem enviada com sucesso!</p>
         {% else %}
         <br>
-        <form action="" method="post" novalidate class="col-11 m-auto" style="color: rgb(20, 90, 50);">
+        <form action="" method="post" novalidate class="col-md-6 m-auto" style="color: rgb(20, 90, 50);">
           {% csrf_token %}
           {% bootstrap_form form %}
           <hr>
