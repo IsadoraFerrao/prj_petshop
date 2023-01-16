@@ -11,13 +11,12 @@ class ReservaForm(forms.ModelForm):
             raise forms.ValidationError('Não é possivel realizar uma reserva para o passado!')
         return data
 
-    def clean_turno(self):
-        reserva_tarde = Reserva.objects.filter(turno='tarde').count()
-        quant_max = 10
-        if reserva_tarde > quant_max:
+    """ def clean_date(self):
+        reserva = Reserva.objects.filter(data__day=16).count()
+        if reserva >= 4:
             raise forms.ValidationError('Não temos mais vagas para esta data!')
-        return reserva_tarde
-
+        return 
+ """
 
     class Meta:
         model = Reserva
