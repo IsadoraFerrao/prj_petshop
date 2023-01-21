@@ -4,26 +4,28 @@ from datetime import date
 
 class ReservaForm(forms.ModelForm):
 
-    def clean_data(self):
-        data = self.cleaned_data['data']
-        hoje = date.today()
-        if data < hoje:
-            raise forms.ValidationError('Não é possivel realizar uma reserva para o passado!')
-        return data
-
     def clean_date(self):
-        reserva = self.cleaned_data['data']
-        if reserva.count() >= 14:
-            raise forms.ValidationError('Não temos mais vagas para esta data!')
-        else:
-            return reserva
+        form_date = self.cleaned_data["data"]
+        today_date = date.today()
+        if form_date < today_date:
+            raise forms.ValidationError('OPS, a data informada é anterior a data de hoje')
+        return form_date
+
+    def clean_shift(self):
+        form_date = self.cleaned_data["data"]
+        form_shift = self.cleaned_data["shift"]
+        baths_in_same_day_and_hour = Reserva.objects.filter(data=form_date, shift=form_shift).count()
+        if baths_in_same_day_and_hour >= 4:
+            raise forms.ValidationError(f'Ops esse horário já esta lotado, para o turno da {form_shift}')
+        return form_shift
+        
 
     """ def clean_date(self):
         reserva = Reserva.objects.filter(data__day=16).count()
         if reserva >= 4:
             raise forms.ValidationError('Não temos mais vagas para esta data!')
-        return  """
- 
+        return 
+     """
 
     class Meta:
         model = Reserva
